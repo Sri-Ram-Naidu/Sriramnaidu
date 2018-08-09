@@ -1,0 +1,61 @@
+<html>
+<head>
+	<script>
+		function abc()
+		{
+			var feedback = document.getElementById("fb");
+			feedback.innerHTML = '<form name="f2" action="xyz.html">Feedback:<input type="text" name="fb1"><input type="button" name="b1" value="Comment"></form>';
+		}
+		function login()
+		{
+		   var lgn = document.getElementById("login");
+		   lgn.innerHTML ='<form name="f1">Username:<input type="text" name="t1"><br><br>Password : <input type="password" name="t2"><br><br><input type="submit" name="b1" value="login"><input type="reset" name="b2" value="reset"></form>';
+		}
+		function hideLogin()
+		{
+           var lgn = document.getElementById("login");
+           lgn.innerHTML='';
+		}
+		function validateUN()
+		{
+			var uname = document.f3.un.value;
+			if(uname.length==0)
+			{
+				document.getElementById("sun").innerText="Username Can't Be empty";
+			}
+			else if(uname.length<6)
+			{
+				document.getElementById("sun").innerText="Username must be less than 6 characters";
+			}
+			else
+			{
+              document.getElementById("sun").innerText="";
+			}
+			}
+		
+	</script>
+</head>
+<table>
+	<pre>
+<body>
+	<h1>Please Login</h1>
+	<input type="button" name="login" value="SHOW" onClick="login()"><br><br>
+	<input type="button" name="hide"  value="HIDE" onClick="hideLogin()"><br><br>
+<hr>
+<h2>
+	<div id="login"></div>
+</h2>
+<hr>
+<h2 onClick="abc()">To Give FeedBack Click Here</h2>
+<h2>
+	<div id ="fb"></div>
+</h2>
+<hr>
+<form name="f3">
+	Username : <input type = "text" name = "un" onChange="validateUN()"><i><span id="sun" style="color:blue">Username Can't be empty</span></i>
+</form>
+
+</pre>
+</table>
+</body>
+</html>

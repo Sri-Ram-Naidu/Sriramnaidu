@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <script>
+        function abc(ele) {
+            ele.innerText = "OOPS! Why Ur Clicked";
+            ele.style.color = "red";
+        }
+
+        function timer() {
+            i = setInterval('dat()', 100);
+        }
+        var x = 0;
+
+        function dat() {
+            document.getElementById("d1").innerText = new Date();
+            if (x % 2 == 0) {
+                document.getElementById("d1").style.color = "blue";
+            } else {
+                document.getElementById("d1").style.color = "green";
+            }
+            x++;
+        }
+    </script>
+</head>
+
+<body>
+    <h1 onClick="abc(this)">Hello Good Morning,Don't click here</h1>
+    <hr>
+    <h1 id="d1"></h1>
+
+    <input type="button" name="b1" value="date" onClick="timer()">
+    <input type="button" name="b2" value="stop" onClick="clearInterval(i)">
+
+</body>
+
+</html>

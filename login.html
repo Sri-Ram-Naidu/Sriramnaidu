@@ -1,0 +1,58 @@
+<html>
+<head>
+	<script>
+      function login()
+      {
+      	var log = document.getElementById("login");
+      	log.innerHTML='<form name="f1"> Username : <input type="text" name="nm"><br/><br/>Password : <input type="password" name="pwd"><br/><br/><input type="submit" name="b1" value="login"><br/><br/><input type="reset" name="b2" value="resets"></form>';
+      }
+      function validate()
+      {
+      	var uname = document.f3.t1.value;
+      	if(uname.length==0)
+      	{
+      		document.getElementById("ram").innerText="Username cant be empty";
+      	}
+      	else if(uname.length<10)
+      	{
+      		document.getElementById("ram").innerText="Username cant be less than 10 characters";
+      	}
+      	else
+      	{
+      		document.getElementById("ram").innerText="";
+      	}
+      	var upassword = document.f3.t2.value;
+      	if(upassword.length==0)
+      	{
+      		document.getElementById("sri").innerText="Password cant be empty";
+      	}
+      	else if(upassword.length<6)
+      	{
+      		document.getElementById("sri").innerText="Password cant be less than 6 characters";
+      	}
+      	else
+      	{
+      		document.getElementById("sri").innerText="";
+      	}
+
+      	}
+	</script>
+</head>
+<body bgcolor="green">
+<div align="Right">
+<a href="file:///E:/Html/Home.html"><i><b>Home</i></b></a><br/>
+<a href="file:///E:/Html/aboutus.html"><i><b>AboutUs</i></b></a><br/>
+<a href="file:///E:/Html/Ourservices.html"><i><b>Services</i></b></a><br/>
+<a href="file:///E:/Html/Address.html"><i><b>Contact Us</i></b></a><br/>
+</div>
+<h1>Please Login</h1>
+<form name="f3">
+Username : <input type="text" name="t1"  onChange="validate()"><span id="ram" style="color:green">Username Can't be empty</span><br/><br/>
+Password : <input type="password" name="t2" onChange="validate()"><span id="sri" style="color:orange">Password Can't be empty</span><br/><br/>
+<input type="button" name="login" value="signin" onClick="login()">
+<hr>
+<div id="login">
+</div>
+</form>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<html>
+<head>
+	<script>
+		function Hello()
+		{
+			document.write("Good Morning Friend");
+		}
+		function f1()
+		{
+			close();
+		}
+		function validation()
+		{
+			var a = document.Ram.Age.value.length;
+			if(isNaN(a))
+			{
+				alert("valid Age");
+			}
+			else
+			{
+				alert("Invalid Age");
+			}
+		}
+		function countLetters()
+		{
+			document.Ram.F1.value = document.Ram.Name.value.length;
+		}
+	</script>
+</head>
+<body>
+	<table>
+		<pre>
+<form name="Ram">
+	Name : <input type="text" name="Name"  onChange="countLetters()"><br/>
+	Age  : <input type="Number" name="Age" ><br/>
+	Length : <input type = "Number" name="F1"><br/>
+	<input type="button" name="S1" value="Sri" onClick="validation()">
+</form>
+</pre>
+</table>
+<table>
+	<pre>
+<form>
+	<input type="button" name="B1" value="Greek1" onClick="Hello()"><br>
+	<input type="button" name="B2" value="Greek2" onClick="f1()"><br/>
+</table>
+</pre>
+</form>
+</body>
+</html>

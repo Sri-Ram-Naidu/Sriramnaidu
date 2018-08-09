@@ -1,0 +1,40 @@
+<html>
+<head>
+	<script>
+		function Emp(name,age,salary,designation)
+		{
+           this.name=name;
+           this.age=age;
+          this.salary=salary;
+           this.designation=designation;
+		}
+
+		Emp.prototype={
+			display:function()
+			{
+				document.write("<hr>Name         : " + this.name);
+				document.write("<br> age         : " + this.age);
+				document.write("<br> salary      : " + this.salary);
+				document.write("<br> designation : " + this.designation);
+			}
+		};
+	</script>
+</head>
+<body>
+	<h1>Creating User Defined Object</h1>
+	<hr>
+	<h4>
+	<script>
+		var myarray = new Array();
+		myarray[0] = new Emp("Sriram",22,25000,"SoftwareEngineer");
+		myarray[1] = new Emp("Sravan",23,35000,"SeniorSoftwareEngineer");
+		myarray[2] = new Emp("Reddy",24,30000,"SeniorSoftwareEngineer1");
+		for (var i = 0; i <myarray.length; i++)
+		 {
+	          document.write("<br> " + myarray[i].display());
+		}
+	
+	</script>
+</h4>
+</body>
+</html>
